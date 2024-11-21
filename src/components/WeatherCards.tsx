@@ -1,8 +1,11 @@
+import * as React from "react"
+import { Button } from './ui/button';
+
 export default function WeatherCards(){
     
     return(
         <div>
-        <h1>this is a weather card</h1>
-        </div>
+<Button></Button>
+</div>
     )
 }
