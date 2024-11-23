@@ -1,4 +1,6 @@
 import WeatherCards from "./components/WeatherCards"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ModeToggle } from "./components/mode-toggle"
 
 const url = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m&temperature_unit=fahrenheit'
 
@@ -15,6 +17,15 @@ fetch(url)
 
 export default function App() {
   return (
-    <WeatherCards/>
+    <div>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    {
+    <div>   
+      <ModeToggle/>
+      <WeatherCards/>
+    </div>
+    }
+  </ThemeProvider>
+    </div>
   )
 }
